@@ -1,17 +1,17 @@
 ## This is a pair of function that cache the inverse of a matrix
 ## It creates a special matrix object that can cache its inverse
 
-## 
+ 
 
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
-        set <- function(y){
+        set <- function(y){ ## set the value of the vector
                 x<<- y
                 inv<<- NULL
         }
-        get <- function() x
-        set_Inverse <- function(inverse) inv <<- inverse
-        get_Inverse <- function() inv
+        get <- function() x # get the value if the vector
+        set_Inverse <- function(inverse) inv <<- inverse ## set the inverse of the vector
+        get_Inverse <- function() inv ## get the value of the inverse
         list(set = set, get = get,
                 set_Inverse = set_Inverse,
                 get_Inverse = get_Inverse)
