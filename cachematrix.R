@@ -9,7 +9,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 x<<- y
                 inv<<- NULL
         }
-        get <- function() x # get the value if the vector
+        get <- function() x ## get the value if the vector
         set_Inverse <- function(inverse) inv <<- inverse ## set the inverse of the vector
         get_Inverse <- function() inv ## get the value of the inverse
         list(set = set, get = get,
